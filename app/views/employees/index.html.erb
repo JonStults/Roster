@@ -1,0 +1,30 @@
+<div class="wrapper">
+  <h1 id="header">G2 Crowd Team Roster</h3>
+  <hr>
+  <div class="info">
+    <%@employees.each do |e|%>
+    <div class="image">
+      <img height="150" width="150" src="<%= e['image'] %>" alt="">
+    </div>
+    <div class="bio">
+      <h4><%= e['name'] %></h4>
+      <h5><%= e['title'] %></h5>
+      <h6><%= e['bio'] %></h6>
+      <p id="question">Want to work with <%= e['name'] %>?</p>
+      <% if e.votes.exists?(:user_id =>  @current_user.id) %>
+        <p id="thanks">Thank you for voting!</p>
+      <% else %>
+        <a id="vote" href="/vote/<%= e['id'] %>">
+        <%= image_tag "thumb.svg", :id => "thumb" %> Yes!</a>
+      <% end %>
+      <p><strong><%= e['count'] %></strong>
+      <% if e['count'] === 1 %>
+        person has said Yes!
+      <% else %>
+        people have said Yes!
+      <% end %></p>
+    </div>
+    <hr>
+    <%end%>
+  </div>
+</div>

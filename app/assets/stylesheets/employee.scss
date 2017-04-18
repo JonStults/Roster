@@ -1,0 +1,52 @@
+.wrapper {
+  padding: 5px;
+  height: 250px;
+}
+
+#header {
+  color: #ee7600;
+  font-weight: 100;
+}
+
+#thumb {
+  margin-bottom: 3px;
+  color: #659ED7;
+}
+
+#vote {
+  text-decoration: none;
+}
+
+.active {
+  background-color: red;
+}
+
+#question {
+  display: inline-block;
+}
+
+#thanks {
+  color: #ee7600;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.info {
+  height: auto;
+}
+
+hr {
+  padding-top: 10px;
+}
+
+.bio {
+  margin-left: 170px;
+  height: 100%;
+}
+
+.image {
+  float: left;
+  margin-left: 10px;
+  height: 150px;
+  width: 150px;
+}
